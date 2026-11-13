@@ -1,480 +1,366 @@
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>RKT935</title>
-<link rel="icon" href="icon.svg">
-<link rel="apple-touch-icon" href="icon-180.png">
-<link rel="manifest" href="manifest.webmanifest">
-<meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#0b0e12">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="RKT935">
-<link rel="stylesheet" href="lib/leaflet.css">
-<link rel="stylesheet" href="style.css?v=1.0.9">
-<script>try{document.documentElement.dataset.theme=localStorage.getItem('ewr_theme')||'dark'}catch(e){document.documentElement.dataset.theme='dark'}</script>
-</head>
-<html lang="vi" data-theme="dark"><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>RKT935</title>
-<link rel="icon" href="icon.svg">
-<link rel="apple-touch-icon" href="icon-180.png">
-<link rel="manifest" href="manifest.webmanifest">
-<meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#0b0e12">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="RKT935">
-<link rel="stylesheet" href="lib/leaflet.css">
-<link rel="stylesheet" href="style.css?v=1.0.9">
-<script>try{document.documentElement.dataset.theme=localStorage.getItem('ewr_theme')||'dark'}catch(e){document.documentElement.dataset.theme='dark'}</script>
-</head>
-<body class="remote nolink">
-<div id="app">
-  <header id="top">
-    <button class="ib" id="bSide" data-ic="list" title="Danh sách sản phẩm (P)"><svg class="ic" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
-    <div class="brand" id="brand" title="RKT935 1.0
-Viết bởi Nguyễn Ngọc Nghĩa - E935 - 0896345086">
-      <img src="icon.svg" alt="">
-      <div><b>RKT<span>935</span> <i class="ver">V1.0</i></b><small id="credit">Viết bởi Nguyễn Ngọc Nghĩa - E935 - 0896345086</small></div>
-    </div>
-    <nav id="tabs" aria-label="Chức năng">
-      <button data-t="radar" title="Radar" class="on"><i data-ic="radar"><svg class="ic" viewBox="0 0 24 24"><path d="M12 12L12 3M12 12l7.8 4.5"></path><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4.5"></circle></svg></i><span>Radar</span></button>
-      <button data-t="apt" title="Sân bay"><i data-ic="plane"><svg class="ic" viewBox="0 0 24 24"><path d="M2 15l20-6-2-2-7 2-5-5-2 1 3 5-5 1.5-2-1.5-1 1 2 3z"></path><path d="M4 21h16"></path></svg></i><span>Sân bay</span></button>
-      <button data-t="synop" title="Synop"><i data-ic="map"><svg class="ic" viewBox="0 0 24 24"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"></path><path d="M9 4v14M15 6v14"></path></svg></i><span>Synop</span></button>
-      <button data-t="fc" title="Dự báo bay"><i data-ic="doc"><svg class="ic" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5M9 12h7M9 16h7"></path></svg></i><span>Dự báo bay</span></button>
-      <button data-t="more" title="Thêm"><i data-ic="list"><svg class="ic" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></i><span>Thêm</span></button>
-    </nav>
-<div class="seg" id="layouts" title="Chia màn hình (phím 1–7)"><button data-l="1" title="1 màn hình (phím 1)"><svg viewBox="0 0 18 14"><rect x="0.5" y="0.5" width="17" height="13"></rect></svg></button><button data-l="2" title="2 màn hình (phím 2)" class="on"><svg viewBox="0 0 18 14"><rect x="0.5" y="0.5" width="7.5" height="13"></rect><rect x="10" y="0.5" width="7.5" height="13"></rect></svg></button><button data-l="3" title="3 màn hình (phím 3)"><svg viewBox="0 0 18 14"><rect x="0.5" y="0.5" width="10" height="13"></rect><rect x="12.5" y="0.5" width="5" height="5.5"></rect><rect x="12.5" y="8" width="5" height="5.5"></rect></svg></button><button data-l="4" title="4 màn hình (phím 4)"><svg viewBox="0 0 18 14"><rect x="0.5" y="0.5" width="7.5" height="5.5"></rect><rect x="10" y="0.5" width="7.5" height="5.5"></rect><rect x="0.5" y="8" width="7.5" height="5.5"></rect><rect x="10" y="8" width="7.5" height="5.5"></rect></svg></button><button data-l="6" title="6 màn hình (phím 5)"><svg viewBox="0 0 18 14"><rect x="0.5" y="0.5" width="4.6" height="5.5"></rect><rect x="6.7" y="0.5" width="4.6" height="5.5"></rect><rect x="12.9" y="0.5" width="4.6" height="5.5"></rect><rect x="0.5" y="8" width="4.6" height="5.5"></rect><rect x="6.7" y="8" width="4.6" height="5.5"></rect><rect x="12.9" y="8" width="4.6" height="5.5"></rect></svg></button><button data-l="9" title="9 màn hình (phím 6)"><svg viewBox="0 0 18 14"><rect x="0.5" y="0.5" width="4.6" height="3.2"></rect><rect x="6.7" y="0.5" width="4.6" height="3.2"></rect><rect x="12.9" y="0.5" width="4.6" height="3.2"></rect><rect x="0.5" y="5.4" width="4.6" height="3.2"></rect><rect x="6.7" y="5.4" width="4.6" height="3.2"></rect><rect x="12.9" y="5.4" width="4.6" height="3.2"></rect><rect x="0.5" y="10.3" width="4.6" height="3.2"></rect><rect x="6.7" y="10.3" width="4.6" height="3.2"></rect><rect x="12.9" y="10.3" width="4.6" height="3.2"></rect></svg></button><button data-l="2v" title="2 màn hình (phím 7)"><svg viewBox="0 0 18 14"><rect x="0.5" y="0.5" width="17" height="5.5"></rect><rect x="0.5" y="8" width="17" height="5.5"></rect></svg></button></div>
-    <label class="sw" title="Kéo / phóng một màn hình thì các màn hình khác đi theo"><input type="checkbox" id="oSync" checked=""><i></i><span>Đồng bộ</span></label>
-    <div class="sp"></div>
-    <div class="st" id="status">Ảnh mới nhất <b>16:50</b> 13/11 · <span class="">cách đây 15 giây</span> · <span style="color:var(--ok)" title="Đang lấy thẳng từ máy chủ IRIS ">SFTP ● trễ 164 s</span></div>
-    <div class="tools">
-      <label class="bl" for="oBase">Nền</label>
-      <select id="oBase" title="Bản đồ nền">
-        <option value="sat">Vệ tinh</option><option value="topo">Địa hình</option><option value="street">Đường phố</option>
-<option value="light">Nền sáng</option><option value="dark">Nền tối</option><option value="osm">OpenStreetMap</option>
-        <option value="none">Không nền</option>
-      </select>
-      <button class="tb" id="bView" title="Thang màu, độ đậm, lọc ngưỡng"><i data-ic="sliders"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9M15 5v4M9 15v4"></path></svg></i><span>Hiển thị</span></button>
-      <button class="tb" id="bLayers" title="Vòng cự ly, KV, địa danh, ô dông…"><i data-ic="layers"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4l9 5-9 5-9-5 9-5z"></path><path d="M3 14l9 5 9-5"></path></svg></i><span>Lớp phủ</span></button>
-      <button class="tb" id="bMeasure" title="Đo khoảng cách – hướng (M)"><i data-ic="ruler"><svg class="ic" viewBox="0 0 24 24"><path d="M3 16L16 3l5 5L8 21z"></path><path d="M8 11l2 2M11 8l2 2M14 5l2 2"></path></svg></i><span>Đo</span></button>
-      <button class="tb" id="bXs" title="Mặt cắt đứng: bấm các điểm trên bản đồ, bấm lại điểm cuối để xem (X)"><i data-ic="layers"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4l9 5-9 5-9-5 9-5z"></path><path d="M3 14l9 5 9-5"></path></svg></i><span>Mặt cắt</span></button>
-      <button class="tb" id="bPng" title="Xuất ảnh màn hình đang chọn"><i data-ic="download"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg></i><span>Ảnh</span></button>
-      <button class="tb" id="bGif" title="Ảnh động theo khoảng thời gian đang chọn"><i data-ic="film"><svg class="ic" viewBox="0 0 24 24"><path d="M3 5h18v14H3z"></path><path d="M10 9v6l5-3z"></path></svg></i><span>GIF</span></button>
-      <label class="sw" title="Hiện tia quét trắng 150 km trên ảnh khi đang TRỰC TIẾP (phím Q)"><input type="checkbox" id="oSweep"><i></i><span>Tia quét</span></label>
-      <span class="div"></span>
-      <button class="ib" id="bInfo" data-ic="panel" title="Thông tin · ô dông · diễn biến · cảnh báo (I)"><svg class="ic" viewBox="0 0 24 24"><path d="M3 4h18v16H3zM15 4v16"></path></svg></button>
-      <button class="ib" id="bFocus" data-ic="focus" title="Chế độ tập trung — chỉ còn ảnh rada (F)"><svg class="ic" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path></svg></button>
-      <button class="ib" id="bTheme" data-ic="sun" title="Giao diện sáng / tối"><svg class="ic" viewBox="0 0 24 24"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"></path></svg></button>
-      <button class="ib" id="bHelp" data-ic="key" title="Phím tắt (?)"><svg class="ic" viewBox="0 0 24 24"><path d="M3 7h18v10H3z"></path><path d="M7 11h1M11 11h1M15 11h2M7 14h10"></path></svg></button>
-<button class="ib mob" id="bMore" data-ic="more" title="Thêm chức năng"><svg class="ic" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.6"></circle><circle cx="12" cy="12" r="1.6"></circle><circle cx="19" cy="12" r="1.6"></circle></svg></button>
-      <button class="ib local" id="bLink" data-ic="phone" title="Đường link + mã QR để xem trên điện thoại / máy khác"><svg class="ic" viewBox="0 0 24 24"><path d="M7 2h10v20H7z"></path><path d="M11 18h2"></path></svg></button>
-      <button class="ib local" id="bSet" data-ic="gear" title="Cài đặt"><svg class="ic" viewBox="0 0 24 24"><path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"></path><path d="M10 3h4l.6 2.4 2.1 1.2 2.4-.7 2 3.4-1.8 1.7v2.4l1.8 1.7-2 3.4-2.4-.7-2.1 1.2L14 21h-4l-.6-2.4-2.1-1.2-2.4.7-2-3.4 1.8-1.7v-2.4L2.9 9.3l2-3.4 2.4.7 2.1-1.2z"></path></svg></button>
-    </div>
-  </header>
-  <div id="credit2">Viết bởi Nguyễn Ngọc Nghĩa - E935 - 0896345086</div>
-
-  <div id="alarm" class=""><span>Phản hồi ≥35 dBZ cách SB Biên Hòa <b>22.9 km</b> hướng ĐĐB (69°) — ảnh 16:49</span><button id="aMute">Tắt tiếng</button></div>
-
-
-  <div id="body">
-    <aside id="side" class="drawer">
-      <div class="dh"><b id="site">TAN SON NHAT</b><span class="sp"></span>
-        <button class="ib sm" id="pinSide" data-ic="pin" title="Ghim cố định / thả nổi"><svg class="ic" viewBox="0 0 24 24"><path d="M9 3h6l-1 6 3 3H7l3-3zM12 12v9"></path></svg></button>
-        <button class="ib sm" id="xSide" data-ic="x" title="Đóng"><svg class="ic" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg></button></div>
-      <small class="root" id="rootTxt"></small>
-      <div id="tree"><div class="pi fresh" draggable="true" title="Radar Tân Sơn Nhất – CMAX (dBZ)
-978 ảnh
-Loại TSN · dữ liệu DBZ"><i class="dot"></i><span class="nm">Radar Tân Sơn Nhất – CMAX (dBZ)</span>
-      <span class="ct">978</span><span class="sub">ảnh mới nhất 16:40 13/11</span></div><div class="pi fresh" draggable="true" title="Radar AMO Hymetnet – 10 trạm radar quốc gia (ảnh gốc hymetnet.gov.vn) – CMAX dBZ
-64 ảnh
-Loại AMO · dữ liệu CMAX"><i class="dot"></i><span class="nm">Radar AMO Hymetnet – 10 trạm radar quốc gia (ảnh gốc hymetnet.gov.vn) – CMAX dBZ</span>
-      <span class="ct">64</span><span class="sub">ảnh mới nhất 16:40 13/11</span></div><div class="pi sel fresh" draggable="true" title="QUÉT TRỰC TIẾP – CMAX cập nhật từng góc nâng (dBZ) – IT-EWR800
-748 ảnh
-Loại KHOI · dữ liệu CMAX"><i class="dot"></i><span class="nm">QUÉT TRỰC TIẾP – CMAX cập nhật từng góc nâng (dBZ) – IT-EWR800</span>
-      <span class="ct">748</span><span class="sub">ảnh mới nhất 16:50 13/11</span></div><div class="pi fresh" draggable="true" title="CAPPI – Phản hồi mực cố định (dBZ) – IT-EWR800
-3065 ảnh
-Loại CAPPI · dữ liệu DBZ"><i class="dot"></i><span class="nm">CAPPI – Phản hồi mực cố định (dBZ) – IT-EWR800</span>
-<span class="ct">3065</span><span class="sub">ảnh mới nhất 16:43 13/11</span></div><div class="pi fresh" draggable="true" title="CMAX – Phản hồi cực đại (dBZ) – IT-EWR800
-3065 ảnh
-Loại MAX · dữ liệu DBZ"><i class="dot"></i><span class="nm">CMAX – Phản hồi cực đại (dBZ) – IT-EWR800</span>
-      <span class="ct">3065</span><span class="sub">ảnh mới nhất 16:43 13/11</span></div><div class="pi fresh" draggable="true" title="CMAX lọc nhiễu (RhoHV) – IT-EWR800
-78 ảnh
-Loại KHOI · dữ liệu CMAX"><i class="dot"></i><span class="nm">CMAX lọc nhiễu (RhoHV) – IT-EWR800</span>
-      <span class="ct">78</span><span class="sub">ảnh mới nhất 16:43 13/11</span></div><div class="pi fresh" draggable="true" title="Đáy phản hồi ≥20 dBZ (km) – IT-EWR800
-78 ảnh
-Loại KHOI · dữ liệu HEIGHT"><i class="dot"></i><span class="nm">Đáy phản hồi ≥20 dBZ (km) – IT-EWR800</span>
-      <span class="ct">78</span><span class="sub">ảnh mới nhất 16:43 13/11</span></div><div class="pi fresh" draggable="true" title="Đáy phản hồi ≥15 dBZ (km) – IT-EWR800
-78 ảnh
-Loại KHOI · dữ liệu HEIGHT"><i class="dot"></i><span class="nm">Đáy phản hồi ≥15 dBZ (km) – IT-EWR800</span>
-      <span class="ct">78</span><span class="sub">ảnh mới nhất 16:43 13/11</span></div><div class="pi fresh" draggable="true" title="Đáy phản hồi ≥30 dBZ (km) – IT-EWR800
-78 ảnh
-Loại KHOI · dữ liệu HEIGHT"><i class="dot"></i><span class="nm">Đáy phản hồi ≥30 dBZ (km) – IT-EWR800</span>
-      <span class="ct">78</span><span class="sub">ảnh mới nhất 16:43 13/11</span></div><div class="pi fresh" draggable="true" title="HMAX – Độ cao lõi phản hồi mạnh nhất (km) – IT-EWR800
-78 ảnh
-Loại KHOI · dữ liệu HEIGHT"><i class="dot"></i><span class="nm">HMAX – Độ cao lõi phản hồi mạnh nhất (km) – IT-EWR800</span>
-      <span class="ct">78</span><span class="sub">ảnh mới nhất 16:43 13/11</span></div><div class="pi fresh" draggable="true" title="VIL – Lượng nước lỏng trong cột (kg/m²) – IT-EWR800
-78 ảnh
-Loại KHOI · dữ liệu VIL"><i class="dot"></i><span class="nm">VIL – Lượng nước lỏng trong cột (kg/m²) – IT-EWR800</span>
-      <span class="ct">78</span><span class="sub">ảnh mới nhất 16:43 13/11</span></div><div class="pi fresh" draggable="true" title="Mật độ VIL (g/m³) – IT-EWR800
-78 ảnh
-Loại KHOI · dữ liệu DENS"><i class="dot"></i><span class="nm">Mật độ VIL (g/m³) – IT-EWR800</span>
-      <span class="ct">78</span><span class="sub">ảnh mới nhất 16:43 13/11</span></div><div class="pi fresh" draggable="true" title="Phân loại hạt – trong cột (nguy hiểm nhất) – IT-EWR800
-78 ảnh
-Loại KHOI · dữ liệu COT"><i class="dot"></i><span class="nm">Phân loại hạt – trong cột (nguy hiểm nhất) – IT-EWR800</span>
-      <span class="ct">78</span><span class="sub">ảnh mới nhất 16:43 13/11</span></div><div class="pi fresh" draggable="true" title="Phân loại hạt – tầng thấp – IT-EWR800
-78 ảnh
-Loại KHOI · dữ liệu THAP"><i class="dot"></i><span class="nm">Phân loại hạt – tầng thấp – IT-EWR800</span>
-      <span class="ct">78</span><span class="sub">ảnh mới nhất 16:43 13/11</span></div><div class="pi fresh" draggable="true" title="PPI dBZ – Độ phản hồi (dBZ) – IT-EWR800
-3119 ảnh
-Loại PPI · dữ liệu DBZ"><i class="dot"></i><span class="nm">PPI dBZ – Độ phản hồi (dBZ) – IT-EWR800</span>
-      <span class="ct">3119</span><span class="sub">ảnh mới nhất 16:43 13/11</span></div><div class="pi fresh" draggable="true" title="PPI VEL – Vận tốc xuyên tâm (m/s) – IT-EWR800
-3119 ảnh
-Loại PPI · dữ liệu VEL"><i class="dot"></i><span class="nm">PPI VEL – Vận tốc xuyên tâm (m/s) – IT-EWR800</span>
-      <span class="ct">3119</span><span class="sub">ảnh mới nhất 16:43 13/11</span></div><div class="pi fresh" draggable="true" title="PPI WIDTH – Độ rộng phổ (m/s) – IT-EWR800
-3119 ảnh
-Loại PPI · dữ liệu WIDTH"><i class="dot"></i><span class="nm">PPI WIDTH – Độ rộng phổ (m/s) – IT-EWR800</span>
-      <span class="ct">3119</span><span class="sub">ảnh mới nhất 16:43 13/11</span></div><div class="pi fresh" draggable="true" title="TOP HEIGHT – Đỉnh mây (km) – IT-EWR800
-3065 ảnh
-Loại TOPS · dữ liệu HEIGHT"><i class="dot"></i><span class="nm">TOP HEIGHT – Đỉnh mây (km) – IT-EWR800</span>
-      <span class="ct">3065</span><span class="sub">ảnh mới nhất 16:43 13/11</span></div><div class="pi fresh" draggable="true" title="SHEAR – Đứt gió / gió giật xuống (m/s/km) – IT-EWR800
-110 ảnh
-Loại SHEAR · dữ liệu SHEAR"><i class="dot"></i><span class="nm">SHEAR – Đứt gió / gió giật xuống (m/s/km) – IT-EWR800</span>
-      <span class="ct">110</span><span class="sub">ảnh mới nhất 16:43 13/11</span></div><div class="pi old" draggable="true" title="RAIN1 – Lượng mưa tích lũy 1 giờ (mm) – IT-EWR800
-146 ảnh
-Loại RAIN1 · dữ liệu FLIQUID2"><i class="dot"></i><span class="nm">RAIN1 – Lượng mưa tích lũy 1 giờ (mm) – IT-EWR800</span>
-      <span class="ct">146</span><span class="sub">ảnh mới nhất 16:00 13/11</span></div><div class="pi fresh" draggable="true" title="TRACK – Theo dõi ô dông – IT-EWR800
-492 ảnh
-Loại TRACK · dữ liệu #34"><i class="dot"></i><span class="nm">TRACK – Theo dõi ô dông – IT-EWR800</span>
-      <span class="ct">492</span><span class="sub">ảnh mới nhất 16:41 13/11</span></div></div>
-      <div class="hint">Bấm → màn hình đang chọn · kéo thả vào màn hình bất kỳ</div>
-    </aside>
-<main id="grid" style="grid-template-columns: 1fr 1fr; grid-template-rows: 1fr;"><div class="panel"><div class="ph"><select><option value="">— chọn ảnh radar —</option><option value="TSN.CMAX">Radar Tân Sơn Nhất – CMAX (dBZ)</option><option value="AMO.HYMETNET">Radar AMO Hymetnet – 10 trạm radar quốc gia (ảnh gốc hymetnet.gov.vn) – CMAX dBZ</option><option value="QUET.CMAX">QUÉT TRỰC TIẾP – CMAX cập nhật từng góc nâng (dBZ) – IT-EWR800</option><option value="CAPPI.DBZ">CAPPI – Phản hồi mực cố định (dBZ) – IT-EWR800</option><option value="Max1.DBZ">CMAX – Phản hồi cực đại (dBZ) – IT-EWR800</option><option value="LOC.CMAX">CMAX lọc nhiễu (RhoHV) – IT-EWR800</option><option value="DAY20.HEIGHT">Đáy phản hồi ≥20 dBZ (km) – IT-EWR800</option><option value="DAY15.HEIGHT">Đáy phản hồi ≥15 dBZ (km) – IT-EWR800</option><option value="DAY30.HEIGHT">Đáy phản hồi ≥30 dBZ (km) – IT-EWR800</option><option value="LOI.HEIGHT">HMAX – Độ cao lõi phản hồi mạnh nhất (km) – IT-EWR800</option><option value="VILK.VIL">VIL – Lượng nước lỏng trong cột (kg/m²) – IT-EWR800</option><option value="VILD.DENS">Mật độ VIL (g/m³) – IT-EWR800</option><option value="HCA.COT">Phân loại hạt – trong cột (nguy hiểm nhất) – IT-EWR800</option><option value="HCA.THAP">Phân loại hạt – tầng thấp – IT-EWR800</option><option value="PPI.DBZ">PPI dBZ – Độ phản hồi (dBZ) – IT-EWR800</option><option value="PPI.VEL">PPI VEL – Vận tốc xuyên tâm (m/s) – IT-EWR800</option><option value="PPI.WIDTH">PPI WIDTH – Độ rộng phổ (m/s) – IT-EWR800</option><option value="TOPS.HEIGHT">TOP HEIGHT – Đỉnh mây (km) – IT-EWR800</option><option value="SHEAR.MESO">SHEAR – Đứt gió / gió giật xuống (m/s/km) – IT-EWR800</option><option value="RAIN1.FLIQUID">RAIN1 – Lượng mưa tích lũy 1 giờ (mm) – IT-EWR800</option><option value="TRACK">TRACK – Theo dõi ô dông – IT-EWR800</option></select><span class="pt">16:40<small>13/11</small></span><span class="bds"><span class="bd">DBZ</span></span><span class="sp"></span>
-    <button class="ib bf" data-ic="target" title="Vừa khung vùng rada (H)"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v4M12 16v4M4 12h4M16 12h4"></path><path d="M6 6h12v12H6z"></path></svg></button>
-    <button class="ib bx" data-ic="bars" title="Mặt cắt đứng (ảnh MAX)" hidden=""><svg class="ic" viewBox="0 0 24 24"><path d="M3 20h18M6 20v-7M10 20V6M14 20v-9M18 20v-5"></path></svg></button>
-    <button class="ib be" data-ic="download" title="Xuất ảnh màn hình này"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg></button>
-    <button class="ib bm" data-ic="expand" title="Phóng to màn hình này (đúp chuột thanh tiêu đề)"><svg class="ic" viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"></path></svg></button></div>
-<div class="mapw"><div class="map leaflet-container leaflet-touch leaflet-retina leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style=""><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 14; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/240/407" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(209px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/240/408" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(465px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/239/407" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(209px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/239/408" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(465px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/241/407" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(209px, 427px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/241/408" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(465px, 427px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/240/406" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-47px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/240/409" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(721px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/239/406" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-47px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/239/409" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px;
-transform: translate3d(721px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/241/406" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-47px, 427px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/241/409" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(721px, 427px, 0px);"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated" width="922" height="730" viewBox="-77 -61 922 730" style="transform: translate3d(-77px, -61px, 0px);"><g><path stroke="#ffffff" stroke-opacity="0.28" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 5" fill="none" d="M300.77176888889517,304.3459229787113a83,83 0 1,0 166,0 a83,83 0 1,0 -166,0 "></path><path stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M216.77176888889517,304.25217741965025a167,167 0 1,0 334,0 a167,167 0 1,0 -334,0 "></path><path stroke="#ffffff" stroke-opacity="0.28" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 5" fill="none" d="M133.77176888889517,304.0959264498815a250,250 0 1,0 500,0 a250,250 0 1,0 -500,0 "></path><path stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M50.77176888889517,303.8771575105857a333,333 0 1,0 666,0 a333,333 0 1,0 -666,0 "></path><path stroke="#ff4fd8" stroke-opacity="0.9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#ff4fd8" fill-opacity="0.03" fill-rule="evenodd" d="M162.24949333333643,116.93875030924391a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0 "></path><path stroke="#ff4fd8" stroke-opacity="0.9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#ff4fd8" fill-opacity="0.03" fill-rule="evenodd" d="M324.05059555555636,94.58301289626979a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0 "></path><path stroke="#ff4fd8" stroke-opacity="0.9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#ff4fd8" fill-opacity="0.03" fill-rule="evenodd" d="M468.8851555555593,112.77990026766201a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0 "></path><path stroke="#ff4fd8" stroke-opacity="0.9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#ff4fd8" fill-opacity="0.03" fill-rule="evenodd" d="M511.88405333332776,-19.014611827762565a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0 "></path><path stroke="#ff4fd8" stroke-opacity="0.9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#ff4fd8" fill-opacity="0.03" fill-rule="evenodd" d="M794.016533333328,485.40823714811995a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0 "></path><path stroke="#ff4fd8" 
-stroke-opacity="0.9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#ff4fd8" fill-opacity="0.03" fill-rule="evenodd" d="M648.0168888888729,685.826524598182a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0 "></path><path stroke="#ff4fd8" stroke-opacity="0.9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#ff4fd8" fill-opacity="0.03" fill-rule="evenodd" d="M427.379022222216,623.0007729361969a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0 "></path><path stroke="#fff" stroke-opacity="1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#0ea5e9" fill-opacity="1" fill-rule="evenodd" d="M380,304a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0 "></path><path stroke="#fff" stroke-opacity="1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#0ea5e9" fill-opacity="1" fill-rule="evenodd" d="M541,471a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0 "></path><path stroke="#fff" stroke-opacity="1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#0ea5e9" fill-opacity="1" fill-rule="evenodd" d="M0 0"></path><path stroke="#fff" stroke-opacity="1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#0ea5e9" fill-opacity="1" fill-rule="evenodd" d="M0 0"></path><path stroke="#ffffff" stroke-opacity="0.95" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M439 246L449 246"></path><path stroke="#111" stroke-opacity="1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" fill="none" d="M439 246L449 246"></path><path stroke="#7dd3fc" stroke-opacity="0.9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" fill="none" d="M439 246L389 246"></path><path stroke="#7dd3fc" stroke-opacity="0.9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" fill="none" d="M449 246L499 246"></path></g></svg></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-marker-pane"><div class="leaflet-marker-icon lbl ring leaflet-zoom-animated" style="margin-left: -12px; margin-top: -14px; transform: translate3d(384px, 137px, 0px); z-index: 137;">50 km</div><div class="leaflet-marker-icon lbl ring leaflet-zoom-animated" style="margin-left: -12px; margin-top: -14px; transform: translate3d(384px, -31px, 0px); z-index: -31;">100 km</div><div class="leaflet-marker-icon lbl kv leaflet-zoom-animated" style="margin-left: -14px; margin-top: -7px; transform: translate3d(212px, 117px, 0px); z-index: 117;">KV80</div><div class="leaflet-marker-icon lbl kv leaflet-zoom-animated" style="margin-left: -14px; margin-top: -7px; transform: translate3d(374px, 95px, 0px); z-index: 95;">KV81</div><div class="leaflet-marker-icon lbl kv leaflet-zoom-animated" style="margin-left: -14px; margin-top: -7px; transform: translate3d(519px, 113px, 0px);
-z-index: 113;">KV82</div><div class="leaflet-marker-icon lbl kv leaflet-zoom-animated" style="margin-left: -14px; margin-top: -7px; transform: translate3d(562px, -19px, 0px); z-index: -19;">KV83</div><div class="leaflet-marker-icon lbl kv leaflet-zoom-animated" style="margin-left: -14px; margin-top: -7px; transform: translate3d(844px, 485px, 0px); z-index: 485;">KV86</div><div class="leaflet-marker-icon lbl kv leaflet-zoom-animated" style="margin-left: -14px; margin-top: -7px; transform: translate3d(698px, 686px, 0px); z-index: 686;">KV87</div><div class="leaflet-marker-icon lbl kv leaflet-zoom-animated" style="margin-left: -14px; margin-top: -7px; transform: translate3d(477px, 623px, 0px); z-index: 623;">KV88</div><div class="leaflet-marker-icon lbl leaflet-zoom-animated" style="margin-left: 6px; margin-top: -7px; transform: translate3d(384px, 304px, 0px); z-index: 304;">TSN</div><div class="leaflet-marker-icon lbl leaflet-zoom-animated" style="margin-left: 6px; margin-top: -7px; transform: translate3d(545px, 471px, 0px); z-index: 471;">V.Tàu</div><div class="leaflet-marker-icon lbl leaflet-zoom-animated" style="margin-left: 6px; margin-top: -7px; transform: translate3d(1221px, 1px, 0px); z-index: 1;">Phan Rang</div><div class="leaflet-marker-icon lbl leaflet-zoom-animated" style="margin-left: 6px; margin-top: -7px; transform: translate3d(957px, 239px, 0px); z-index: 239;">Phan Thiết</div><div class="leaflet-marker-icon ref-ic leaflet-zoom-animated" tabindex="0" role="button" style="margin-left: -9px; margin-top: -11px; width: 18px; height: 18px; transform: translate3d(444px, 246px, 0px); z-index: 246;">▲</div><div class="leaflet-marker-icon lbl leaflet-zoom-animated" style="margin-left: 10px; margin-top: -7px; transform: translate3d(444px, 246px, 0px); z-index: 246;">SB Biên Hòa</div><div class="leaflet-marker-icon pin-ic leaflet-zoom-animated" tabindex="0" role="button" style="transform: translate3d(183px, 166px, 0px); z-index: 166;"></div><div class="leaflet-marker-icon lbl ring leaflet-zoom-animated" style="margin-left: 6px; margin-top: -6px; transform: translate3d(389px, 246px, 0px); z-index: 246;">09</div><div class="leaflet-marker-icon lbl ring leaflet-zoom-animated" style="margin-left: 6px; margin-top: -6px; transform: translate3d(499px, 246px, 0px); z-index: 246;">27</div></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(104367px, 61573px, 0px)
-scale(256);"></div><div class="leaflet-pane leaflet-radar-pane" style="z-index: 350;"><img class="leaflet-image-layer leaflet-zoom-animated radar-img" src="/api/img?p=TSN.CMAX&amp;f=TSN_202611130940.jpg&amp;pal=chuan&amp;min=&amp;uns=0" alt="" style="z-index: 1; opacity: 0.85; transform: translate3d(117px, 36px, 0px); width: 533px; height: 537px;"><img class="leaflet-image-layer leaflet-zoom-animated radar-img" src="/api/img?p=TSN.CMAX&amp;f=TSN_202611130935.jpg&amp;pal=chuan&amp;min=&amp;uns=0" alt="" style="z-index: 1; opacity: 0; transform: translate3d(117px, 36px, 0px); width: 533px; height: 537px;"></div><div class="leaflet-pane leaflet-labels-pane" style="z-index: 450; pointer-events: none;"><div class="leaflet-layer " style="z-index: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 14; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/240/407" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(209px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/240/408" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(465px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/239/407" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(209px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/239/408" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(465px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/241/407" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(209px, 427px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/241/408" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(465px, 427px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/240/406" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-47px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/240/409" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px;
-transform: translate3d(721px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/239/406" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-47px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/239/409" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(721px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/241/406" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-47px, 427px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/241/409" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px;
-transform: translate3d(721px, 427px, 0px);"></div></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="false"><span aria-hidden="true">+</span></a><a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a></div></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-scale leaflet-control"><div class="leaflet-control-scale-line" style="width: 67px;">20 km</div></div></div></div></div><canvas class="sweep" width="960" height="760"></canvas><div class="stat glass">Max <b>60</b> dBZ · gần SB Biên Hòa nhất <b>22.5 km</b> ĐĐB</div><div class="nb" title="Bấm để xem mô tả sản phẩm"><b>TÂN SƠN NHẤT</b></div><div class="leg glass"><div class="u">dBZ</div><div class="bar"><div class="r"><i style="background:#ffffff"></i><span>75</span></div><div class="r"><i style="background:#9500f9"></i><span>70</span></div><div class="r"><i style="background:#fd00ff"></i><span>65</span></div><div class="r"><i style="background:#930100"></i><span>60</span></div><div class="r"><i style="background:#c80000"></i><span>55</span></div><div class="r"><i style="background:#fe0002"></i><span>50</span></div><div class="r"><i style="background:#ff7a01"></i><span>45</span></div><div class="r"><i style="background:#ffc702"></i><span>40</span></div><div class="r"><i style="background:#ffff01"></i><span>35</span></div><div class="r"><i style="background:#009700"></i><span>30</span></div><div class="r"><i style="background:#01c700"></i><span>25</span></div><div class="r"><i style="background:#01ff00"></i><span>20</span></div><div class="r"><i style="background:#0001fb"></i><span>15</span></div><div class="r"><i style="background:#0095ff"></i><span>10</span></div><div class="r"><i style="background:#02ffff"></i><span>5</span></div></div></div><div class="ro glass" style="bottom: 35px;"><span class="m">không có phản hồi</span><br>11.631°N 107.406°E<br><span class="m">SB Biên Hòa: 97.0 km / 41° (ĐB) · rada 97.0 km/41°</span></div><div class="msg" hidden=""><span class="glass"></span></div></div>
-<div class="xs" hidden=""><img alt=""></div></div><div class="panel act max"><div class="ph"><select><option value="">— chọn ảnh radar —</option><option value="TSN.CMAX">Radar Tân Sơn Nhất – CMAX (dBZ)</option><option value="AMO.HYMETNET">Radar AMO Hymetnet – 10 trạm radar quốc gia (ảnh gốc hymetnet.gov.vn) – CMAX dBZ</option><option value="QUET.CMAX">QUÉT TRỰC TIẾP – CMAX cập nhật từng góc nâng (dBZ) – IT-EWR800</option><option value="CAPPI.DBZ">CAPPI – Phản hồi mực cố định (dBZ) – IT-EWR800</option><option value="Max1.DBZ">CMAX – Phản hồi cực đại (dBZ) – IT-EWR800</option><option value="LOC.CMAX">CMAX lọc nhiễu (RhoHV) – IT-EWR800</option><option value="DAY20.HEIGHT">Đáy phản hồi ≥20 dBZ (km) – IT-EWR800</option><option value="DAY15.HEIGHT">Đáy phản hồi ≥15 dBZ (km) – IT-EWR800</option><option value="DAY30.HEIGHT">Đáy phản hồi ≥30 dBZ (km) – IT-EWR800</option><option value="LOI.HEIGHT">HMAX – Độ cao lõi phản hồi mạnh nhất (km) – IT-EWR800</option><option value="VILK.VIL">VIL – Lượng nước lỏng trong cột (kg/m²) – IT-EWR800</option><option value="VILD.DENS">Mật độ VIL (g/m³) – IT-EWR800</option><option value="HCA.COT">Phân loại hạt – trong cột (nguy hiểm nhất) – IT-EWR800</option><option value="HCA.THAP">Phân loại hạt – tầng thấp – IT-EWR800</option><option value="PPI.DBZ">PPI dBZ – Độ phản hồi (dBZ) – IT-EWR800</option><option value="PPI.VEL">PPI VEL – Vận tốc xuyên tâm (m/s) – IT-EWR800</option><option value="PPI.WIDTH">PPI WIDTH – Độ rộng phổ (m/s) – IT-EWR800</option><option value="TOPS.HEIGHT">TOP HEIGHT – Đỉnh mây (km) – IT-EWR800</option><option value="SHEAR.MESO">SHEAR – Đứt gió / gió giật xuống (m/s/km) – IT-EWR800</option><option value="RAIN1.FLIQUID">RAIN1 – Lượng mưa tích lũy 1 giờ (mm) – IT-EWR800</option><option value="TRACK">TRACK – Theo dõi ô dông – IT-EWR800</option></select><span class="pt">16:50<small>13/11</small></span><span class="bds"><span class="bd">CMAX</span></span><span class="sp"></span>
-    <button class="ib bf" data-ic="target" title="Vừa khung vùng rada (H)"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v4M12 16v4M4 12h4M16 12h4"></path><path d="M6 6h12v12H6z"></path></svg></button>
-    <button class="ib bx" data-ic="bars" title="Mặt cắt đứng (ảnh MAX)" hidden=""><svg class="ic" viewBox="0 0 24 24"><path d="M3 20h18M6 20v-7M10 20V6M14 20v-9M18 20v-5"></path></svg></button>
-    <button class="ib be" data-ic="download" title="Xuất ảnh màn hình này"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg></button>
-    <button class="ib bm" data-ic="expand" title="Phóng to màn hình này (đúp chuột thanh tiêu đề)"><svg class="ic" viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"></path></svg></button></div>
-<div class="mapw"><div class="map leaflet-container leaflet-touch leaflet-retina leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style=""><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(384px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 14; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/240/407" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(209px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/240/408" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(465px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/239/407" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(209px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/239/408" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(465px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/241/407" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(209px, 427px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/241/408" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(465px, 427px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/240/406" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-47px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/240/409" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(721px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/239/406" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-47px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/239/409" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px;
-transform: translate3d(721px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/241/406" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-47px, 427px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/241/409" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(721px, 427px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/240/405" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-303px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/239/405" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-303px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/241/405" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-303px, 427px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/240/404" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-559px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/240/410" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(977px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/239/404" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-559px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/239/410" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(977px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/241/404" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-559px, 427px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/241/410" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px;
-transform: translate3d(977px, 427px, 0px);"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated" width="1843" height="730" viewBox="-538 -61 1843 730" style="transform: translate3d(-538px, -61px, 0px);"><g><path stroke="#ffffff" stroke-opacity="0.28" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 5" fill="none" d="M361.46538666664856,245.91124613965076a83,83 0 1,0 166,0 a83,83 0 1,0 -166,0 "></path><path stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M277.46538666664856,245.81605081621092a167,167 0 1,0 334,0 a167,167 0 1,0 -334,0 "></path><path stroke="#ffffff" stroke-opacity="0.28" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 5" fill="none" d="M194.46538666664856,245.65738343226985a250,250 0 1,0 500,0 a250,250 0 1,0 -500,0 "></path><path stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M110.46538666664856,245.43523121868202a334,334 0 1,0 668,0 a334,334 0 1,0 -668,0 "></path><path stroke="#ffffff" stroke-opacity="0.28" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 5" fill="none" d="M27.465386666648556,245.149576295109a417,417 0 1,0 834,0 a417,417 0 1,0 -834,0 "></path><path stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M-55.534613333351444,244.80039566640335a500,500 0 1,0 1000,0 a500,500 0 1,0 -1000,0 "></path><path stroke="#ff4fd8" stroke-opacity="0.9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#ff4fd8" fill-opacity="0.03" fill-rule="evenodd" d="M162.24949333333643,116.93875030924391a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0 "></path><path stroke="#ff4fd8" stroke-opacity="0.9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#ff4fd8" fill-opacity="0.03" fill-rule="evenodd" d="M324.05059555555636,94.58301289626979a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0 "></path><path stroke="#ff4fd8" stroke-opacity="0.9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#ff4fd8" fill-opacity="0.03" fill-rule="evenodd" d="M468.8851555555593,112.77990026766201a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0 "></path><path stroke="#ff4fd8" stroke-opacity="0.9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#ff4fd8" fill-opacity="0.03" fill-rule="evenodd" d="M511.88405333332776,-19.014611827762565a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0 "></path><path stroke="#ff4fd8" stroke-opacity="0.9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#ff4fd8" fill-opacity="0.03" fill-rule="evenodd" d="M794.016533333328,485.40823714811995a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0 "></path><path 
-stroke="#ff4fd8" stroke-opacity="0.9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#ff4fd8" fill-opacity="0.03" fill-rule="evenodd" d="M648.0168888888729,685.826524598182a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0 "></path><path stroke="#ff4fd8" stroke-opacity="0.9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#ff4fd8" fill-opacity="0.03" fill-rule="evenodd" d="M427.379022222216,623.0007729361969a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0 "></path><path stroke="#fff" stroke-opacity="1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#0ea5e9" fill-opacity="1" fill-rule="evenodd" d="M380,304a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0 "></path><path stroke="#fff" stroke-opacity="1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#0ea5e9" fill-opacity="1" fill-rule="evenodd" d="M541,471a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0 "></path><path stroke="#fff" stroke-opacity="1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#0ea5e9" fill-opacity="1" fill-rule="evenodd" d="M1217,1a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0 "></path><path stroke="#fff" stroke-opacity="1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#0ea5e9" fill-opacity="1" fill-rule="evenodd" d="M953,239a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0 "></path><path stroke="#ffffff" stroke-opacity="0.95" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M439 246L449 246"></path><path stroke="#111" stroke-opacity="1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" fill="none" d="M439 246L449 246"></path><path stroke="#7dd3fc" stroke-opacity="0.9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" fill="none" d="M439 246L389 246"></path><path stroke="#7dd3fc" stroke-opacity="0.9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" fill="none" d="M449 246L499 246"></path></g></svg></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-marker-pane"><div class="leaflet-marker-icon lbl ring leaflet-zoom-animated" style="margin-left: -12px; margin-top: -14px; transform: translate3d(444px, 78px, 0px); z-index: 78;">50 km</div><div class="leaflet-marker-icon lbl ring leaflet-zoom-animated" style="margin-left: -12px; margin-top: -14px; transform: translate3d(444px, -90px, 0px); z-index: -90;">100 km</div><div class="leaflet-marker-icon lbl ring leaflet-zoom-animated" style="margin-left: -12px; margin-top: -14px; transform: translate3d(444px, -258px, 0px); z-index: -258;">150 km</div><div class="leaflet-marker-icon lbl kv leaflet-zoom-animated" style="margin-left: -14px; margin-top: -7px; transform: translate3d(212px, 117px, 0px); z-index: 117;">KV80</div><div class="leaflet-marker-icon lbl kv leaflet-zoom-animated" style="margin-left: -14px;
-margin-top: -7px; transform: translate3d(374px, 95px, 0px); z-index: 95;">KV81</div><div class="leaflet-marker-icon lbl kv leaflet-zoom-animated" style="margin-left: -14px; margin-top: -7px; transform: translate3d(519px, 113px, 0px); z-index: 113;">KV82</div><div class="leaflet-marker-icon lbl kv leaflet-zoom-animated" style="margin-left: -14px; margin-top: -7px; transform: translate3d(562px, -19px, 0px); z-index: -19;">KV83</div><div class="leaflet-marker-icon lbl kv leaflet-zoom-animated" style="margin-left: -14px; margin-top: -7px; transform: translate3d(844px, 485px, 0px); z-index: 485;">KV86</div><div class="leaflet-marker-icon lbl kv leaflet-zoom-animated" style="margin-left: -14px; margin-top: -7px; transform: translate3d(698px, 686px, 0px); z-index: 686;">KV87</div><div class="leaflet-marker-icon lbl kv leaflet-zoom-animated" style="margin-left: -14px; margin-top: -7px; transform: translate3d(477px, 623px, 0px); z-index: 623;">KV88</div><div class="leaflet-marker-icon lbl leaflet-zoom-animated" style="margin-left: 6px; margin-top: -7px; transform: translate3d(384px, 304px, 0px); z-index: 304;">TSN</div><div class="leaflet-marker-icon lbl leaflet-zoom-animated" style="margin-left: 6px; margin-top: -7px; transform: translate3d(545px, 471px, 0px); z-index: 471;">V.Tàu</div><div class="leaflet-marker-icon lbl leaflet-zoom-animated" style="margin-left: 6px; margin-top: -7px; transform: translate3d(1221px, 1px, 0px); z-index: 1;">Phan Rang</div><div class="leaflet-marker-icon lbl leaflet-zoom-animated" style="margin-left: 6px; margin-top: -7px; transform: translate3d(957px, 239px, 0px); z-index: 239;">Phan Thiết</div><div class="leaflet-marker-icon ref-ic leaflet-zoom-animated" tabindex="0" role="button" style="margin-left: -9px; margin-top: -11px; width: 18px; height: 18px; transform: translate3d(444px, 246px, 0px); z-index: 246;">▲</div><div class="leaflet-marker-icon lbl leaflet-zoom-animated" style="margin-left: 10px; margin-top: -7px; transform: translate3d(444px, 246px, 0px); z-index: 246;">SB Biên Hòa</div><div class="leaflet-marker-icon pin-ic leaflet-zoom-animated" tabindex="0" role="button" style="transform: translate3d(183px, 166px, 0px); z-index: 166;"></div><div class="leaflet-marker-icon lbl ring leaflet-zoom-animated" style="margin-left: 6px; margin-top: -6px; transform: translate3d(389px, 246px, 0px); z-index: 246;">09</div><div class="leaflet-marker-icon lbl ring leaflet-zoom-animated" style="margin-left: 6px; margin-top: -6px; transform: translate3d(499px, 246px, 0px); z-index: 246;">27</div></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(104367px, 61573px, 0px)
-scale(256);"></div><div class="leaflet-pane leaflet-radar-pane" style="z-index: 350;"><img class="leaflet-image-layer leaflet-zoom-animated radar-img" src="/api/img?p=QUET.CMAX&amp;f=KQ_20261113094906.npz&amp;pal=chuan&amp;min=&amp;uns=0" alt="" style="z-index: 1; opacity: 0.85; transform: translate3d(-57px, -255px, 0px); width: 997px; height: 1004px; mask-image: conic-gradient(from 22.3deg at 50.25% 49.9%, transparent 0deg, transparent 0deg, rgb(0, 0, 0) 0deg);"><img class="leaflet-image-layer leaflet-zoom-animated radar-img" src="/api/img?p=QUET.CMAX&amp;f=KQ_20261113094944.npz&amp;pal=chuan&amp;min=&amp;uns=0" alt="" style="z-index: 1; opacity: 0.85; transform: translate3d(-57px, -255px, 0px); width: 997px; height: 1004px; transition: none; mask-image: conic-gradient(from 22.3deg at 50.25% 49.9%, rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 0deg, transparent 0deg);"></div><div class="leaflet-pane leaflet-labels-pane" style="z-index: 450; pointer-events: none;"><div class="leaflet-layer " style="z-index: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 14; transform: translate3d(0px, 0px, 0px)
-scale(1);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/240/407" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(209px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/240/408" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(465px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/239/407" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(209px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/239/408" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(465px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/241/407" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(209px, 427px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/241/408" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(465px, 427px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/240/406" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-47px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/240/409" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(721px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/239/406" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-47px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/239/409" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(721px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/241/406" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px;
-transform: translate3d(-47px, 427px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/241/409" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(721px, 427px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/240/405" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-303px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/239/405" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-303px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/241/405" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-303px, 427px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/240/404" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-559px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/240/410" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(977px, 171px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/239/404" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-559px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/239/410" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(977px, -85px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/241/404" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-559px, 427px, 0px);"><img alt="" src="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/241/410" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px;
-transform: translate3d(977px, 427px, 0px);"></div></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="false"><span aria-hidden="true">+</span></a><a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a></div></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-scale leaflet-control"><div class="leaflet-control-scale-line" style="width: 67px;">20 km</div></div></div></div></div><canvas class="sweep" width="1920" height="760"></canvas><div class="stat glass">Max <b>53.5</b> dBZ · gần SB Biên Hòa nhất <b>22.9 km</b> ĐĐB</div><div class="nb" title="Bấm để xem mô tả sản phẩm"><b>QUÉT TRỰC TIẾP</b><i>·</i><span class="onq">● đang quét · góc 30° · 66s trước</span><i>·</i><span>góc thứ 7</span></div><div class="leg glass"><div class="u">dBZ</div><div class="bar"><div class="r"><i style="background:#ffffff"></i><span>75</span></div><div class="r"><i style="background:#9500f9"></i><span>70</span></div><div class="r"><i style="background:#fd00ff"></i><span>65</span></div><div class="r"><i style="background:#930100"></i><span>60</span></div><div class="r"><i style="background:#c80000"></i><span>55</span></div><div class="r"><i style="background:#fe0002"></i><span>50</span></div><div class="r"><i style="background:#ff7a01"></i><span>45</span></div><div class="r"><i style="background:#ffc702"></i><span>40</span></div><div class="r"><i style="background:#ffff01"></i><span>35</span></div><div class="r"><i style="background:#009700"></i><span>30</span></div><div class="r"><i style="background:#01c700"></i><span>25</span></div><div class="r"><i style="background:#01ff00"></i><span>20</span></div><div class="r"><i style="background:#0001fb"></i><span>15</span></div><div class="r"><i style="background:#0095ff"></i><span>10</span></div><div class="r"><i style="background:#02ffff"></i><span>5</span></div></div></div><div class="ro glass" style="bottom: 38px;"><span class="m">không có phản hồi</span><br>11.633°N 105.765°E<br><span class="m">SB Biên Hòa: 136.1 km / 303° (TTB) · rada 136.1 km/303°</span></div><div class="msg" hidden=""><span class="glass"></span></div></div>
-    <div class="xs" hidden=""><img alt=""></div></div></main>
-    <div id="aiPane" hidden=""><iframe id="aif" title="Hỏi AI" allow="clipboard-write"></iframe></div>
-    <div id="fab" aria-label="Công cụ">
-<button id="f_base" data-f="base" data-ic="map" title="Nền bản đồ"><svg class="ic" viewBox="0 0 24 24"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"></path><path d="M9 4v14M15 6v14"></path></svg></button>
-      <button id="f_layers" data-f="layers" data-ic="layers" title="Lớp phủ"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4l9 5-9 5-9-5 9-5z"></path><path d="M3 14l9 5 9-5"></path></svg></button>
-      <button id="f_view" data-f="view" data-ic="sliders" title="Hiển thị ảnh"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9M15 5v4M9 15v4"></path></svg></button>
-      <button id="f_split" data-f="split" data-ic="split" title="Chia màn hình: 1 / 2" class="on"><svg class="ic" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"></path><path d="M4 12h16"></path></svg></button>
-      <button id="f_sweep" data-f="sweep" data-ic="radar" title="Tia quét" class="on"><svg class="ic" viewBox="0 0 24 24"><path d="M12 12L12 3M12 12l7.8 4.5"></path><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4.5"></circle></svg></button>
-      <button id="f_info" data-f="info" data-ic="info" title="Thông tin · ô dông · gió · cảnh báo" class=""><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v6M12 7.5v.5"></path></svg></button>
-      <button id="f_ai" data-f="ai" data-ic="ai" title="Hỏi AI"><svg class="ic" viewBox="0 0 24 24"><path d="M4 5.5h16v10.5H10l-4.5 3.5V16H4z"></path><path d="M15.5 7.6l.55 1.45 1.45.55-1.45.55-.55 1.45-.55-1.45-1.45-.55 1.45-.55z"></path><path d="M7.5 10h5M7.5 12.8h3.5"></path></svg></button>
-      <button id="f_more" data-f="more" data-ic="more" title="Thêm"><svg class="ic" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.6"></circle><circle cx="12" cy="12" r="1.6"></circle><circle cx="19" cy="12" r="1.6"></circle></svg></button>
-    </div>
-    <aside id="info" class="drawer right">
-      <div class="dh"><div class="tabs"><button data-t="sb" class="">Sân bay</button><button data-t="meta">Thông tin</button><button data-t="cells">Đối lưu</button><button data-t="ser" class="on">Diễn biến</button><button data-t="may">Mây</button><button data-t="vad">Gió</button><button data-t="alert">Cảnh báo</button></div>
-        <button class="ib sm" id="pinInfo" data-ic="pin" title="Ghim cố định / thả nổi"><svg class="ic" viewBox="0 0 24 24"><path d="M9 3h6l-1 6 3 3H7l3-3zM12 12v9"></path></svg></button>
-        <button class="ib sm" id="xInfo" data-ic="x" title="Đóng"><svg class="ic" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg></button></div>
-<div id="tSb" class="tab" hidden=""><h3>Phục vụ bay — SB Biên Hòa <small class="note">trực tiếp</small></h3><div class="sbal">⚠ ĐỨT GIÓ ≥3 m/s/km: đường băng 25,2 · tiếp cận 09 25,2 · trong 25 km 25,2</div><h4>Mây đối lưu trong 80 km <small class="note">TRACK 16:20 · đáy Cu ước tính ~600 m · 0°C 5,2 km</small></h4><table class="cells"><tbody><tr><th>Loại</th><th>dBZ</th><th>Đỉnh</th><th>Cách SB</th><th>Đi về · km/h</th><th>Tới SB</th><th>Ra</th></tr><tr data-la="11.03822" data-lo="106.47117">
-      <td><span class="lm lm-Cb">Cb</span></td><td>41</td><td>10,1</td>
-      <td>38,5 <small>T</small></td><td>B · 12</td>
-      <td>–</td><td>–</td></tr><tr data-la="11.10545" data-lo="106.47344">
-      <td><span class="lm lm-Cucon">Cu con</span></td><td>30</td><td>8,1</td>
-      <td>40,3 <small>TTB</small></td><td>B · 12</td>
-      <td>–</td><td>–</td></tr><tr data-la="11.14387" data-lo="106.41161">
-      <td><span class="lm lm-Cucon">Cu con</span></td><td>37</td><td>8,4</td>
-      <td>48,2 <small>TTB</small></td><td>B · 12</td>
-      <td>–</td><td>–</td></tr><tr data-la="10.96416" data-lo="106.3053">
-      <td><span class="lm lm-Cb">Cb</span></td><td>50</td><td>6,7</td>
-      <td>56 <small>T</small></td><td>B · 12</td>
-      <td>–</td><td>–</td></tr><tr data-la="11.08391" data-lo="106.26809">
-      <td><span class="lm lm-Cb">Cb</span></td><td>50</td><td>17,5</td>
-      <td>61,3 <small>TTB</small></td><td>B · 12</td>
-      <td>–</td><td>–</td></tr><tr data-la="11.0804" data-lo="106.16261">
-      <td><span class="lm lm-Cucon">Cu con</span></td><td>30</td><td>17,2</td>
-      <td>72,5 <small>T</small></td><td>B · 12</td>
-<td>–</td><td>–</td></tr></tbody></table><h4>Mưa tích lũy 1 giờ <small class="note">RAIN1 16:00</small></h4><dl class="kv"><dt>Tại SB</dt><dd><b>0</b> mm</dd><dt>Trên đường băng (lớn nhất)</dt><dd><b>0,1</b> mm</dd><dt>Trong 5 km</dt><dd>0,4 mm</dd></dl><h4>Gió tầng thấp <small class="note">VAD 18:17 (cũ 30128 phút)</small></h4><table class="cells"><tbody><tr><th>Độ cao</th><th>Gió (kt)</th><th title="kt / 100 ft">Đứt gió</th><th>Hạ 09: dọc/ngang</th><th>Hạ 27: dọc/ngang</th></tr><tr><td class="nw">1.500 m</td><td class="nw">050°/17</td><td class="nw">–</td><td class="nw">ngược 13 / 11</td><td class="nw"><b class="err">xuôi 13</b> / 11</td></tr><tr><td class="nw">2.000 m</td><td class="nw">052°/21</td><td class="nw"><span class="">0,3 nhẹ</span></td><td class="nw">ngược 17 / 13</td><td class="nw"><b class="err">xuôi 17</b> / 13</td></tr><tr><td class="nw">3.000 m</td><td class="nw">326°/23</td><td class="nw"><span class="">0,9 nhẹ</span></td><td class="nw"><b class="err">xuôi 13</b> / 19</td><td class="nw">ngược 13 / 19</td></tr></tbody></table><p class="note">Đứt gió theo cách phân cấp ICAO (kt/100 ft giữa 2 mức). "ngược" = gió ngược hướng hạ cánh (tốt), "xuôi" = gió xuôi. Đơn vị kt.</p><h4>Diễn biến tại SB (10 km) · <span class="chips" id="sbGio"><button data-g="3" class="">3 giờ</button><button data-g="6" class="on">6 giờ</button></span></h4>
-    <p class="note"><b class="okc">▼ đang YẾU ĐI / tan</b> (-35,3 dBZ / 30')</p><canvas id="sbC" style="height:150px" width="395" height="187"></canvas><canvas id="sbR" style="height:70px;margin-top:4px" width="395" height="87"></canvas>
-    <p class="note">Cột màu: dBZ lớn nhất trong 10 km · đường trắng: đỉnh mây (km, thang phải) · dưới: cường độ mưa tại SB (mm/h, Marshall–Palmer).</p><h4>Hoạt động rada <span id="rlsD"><small class="note">ngày 13/11/2026</small></span></h4><div id="rls"><p class="note">Tổng thời gian quét: <b>0'</b></p><table class="cells"><tbody><tr><th>Từ</th><th>Đến</th><th>Trạng thái</th><th>Thời lượng</th></tr><tr><td>14:57</td><td>16:48</td><td class="err">■ Dừng</td><td>1h52</td></tr></tbody></table>
-    <button class="btn" id="rlsCp">Chép để ghi sổ trực</button></div><p class="note">Đường băng: hướng 90° (09/27), dài 3 km, hành lang tiếp cận 15 km — sửa trong ⚙ Cài đặt nếu chưa đúng.</p></div>
-      <div id="tMeta" class="tab" hidden=""><h3>QUÉT TRỰC TIẾP – CMAX cập nhật từng góc nâng (dBZ) – IT-EWR800</h3><dl class="kv"><dt>Thư mục</dt><dd>QUET.CMAX</dd><dt>Số ảnh</dt><dd>684</dd><dt>Ảnh cũ nhất</dt><dd>14:44 13/11/2026</dd><dt title="Từ giờ quét ghi trong tên file tới lúc file xuất hiện trên ổ (trung vị 20 ảnh gần nhất)">Độ trễ có ảnh</dt><dd>0 phút</dd><dt>Giờ ảnh (VN)</dt><dd>16:39 13/11/2026</dd><dt>Giờ UTC</dt><dd>09:39Z</dd>
-<dt>Loại / dữ liệu</dt><dd>KHOI / CMAX</dd><dt>Nhiệm vụ quét</dt><dd>VOLUME</dd><dt>Lớp tính MAX</dt><dd>0–18 km</dd><dt>Độ phân giải</dt><dd>625 m/điểm</dd><dt>Lưới</dt><dd>480 × 480</dd>
-      <dt>Bán kính ảnh</dt><dd>150 km</dd><dt>Trạm</dt><dd>VN07</dd><dt>Vị trí rada</dt><dd>10.9704, 106.8106</dd></dl><h4>Thống kê ảnh</h4><dl class="kv"><dt>Lớn nhất</dt><dd>53.5 dBZ</dd><dt>Diện tích ≥20 dBZ</dt><dd>2.054 km²</dd><dt>Diện tích ≥35 dBZ</dt><dd>287 km²</dd><dt>Diện tích ≥45 dBZ</dt><dd>35 km²</dd><dt>Diện tích ≥55 dBZ</dt><dd>0 km²</dd><dt>Gần SB Biên Hòa nhất</dt><dd>22.5 km, ĐĐB (71°)</dd><dt>Giá trị tại đó</dt><dd>35</dd><dt>Lớn nhất trong 30 km</dt><dd>53.5</dd></dl><p class="note" style="margin-top:14px">Viết bởi Nguyễn Ngọc Nghĩa - E935 - 0896345086</p></div>
-      <div id="tCells" class="tab" hidden=""></div>
-      <div id="tSer" class="tab"><h3>Diễn biến tại 11.259°N 107.222°E</h3>
-    <div class="row" style="justify-content:space-between;align-items:center"><span class="note">Giá trị lớn nhất trong bán kính</span>
-    <div class="chips" id="serR"><button data-r="1" class="">1 km</button><button data-r="3" class="on">3 km</button><button data-r="5" class="">5 km</button><button data-r="10" class="">10 km</button><button data-r="20" class="">20 km</button></div></div><canvas id="serC" width="412" height="235"></canvas>
-    <dl class="kv" style="margin-top:10px"><dt>Sản phẩm</dt><dd>TÂN SƠN NHẤT</dd><dt>Số ảnh</dt><dd>35</dd>
-    <dt>Lớn nhất</dt><dd>– dBZ</dd></dl>
-    <p class="note">Chuột phải lên bản đồ để chọn điểm khác. Bấm vào biểu đồ để tới thời điểm đó.</p></div>
-      <div id="tVad" class="tab" hidden=""></div>
-      <div id="tAlert" class="tab" hidden=""></div>
-      <div id="tMay" class="tab" hidden=""></div>
-    </aside>
-    <button id="exitFocus" hidden="">Thoát chế độ tập trung (Esc)</button>
-  </div>
-
-  <div id="ktpane" hidden=""><iframe id="ktf" title="RKT935" allow="clipboard-write"></iframe><div id="ktmsg" hidden=""></div></div>
-
-  <footer id="tl">
-    <div class="tlc">
-      <button class="cal" id="bCal" title="Lịch dữ liệu: ngày nào / giờ nào có ảnh (L)"><i data-ic="cal"><svg class="ic" viewBox="0 0 24 24"><path d="M4 5h16v15H4zM4 10h16M8 3v4M16 3v4"></path></svg></i><b id="calTxt">Hôm nay</b></button>
-      <button class="ib" id="dPrev" data-ic="dprev" title="Ngày trước có dữ liệu"><svg class="ic" viewBox="0 0 24 24"><path d="M11 6l-6 6 6 6M19 6l-6 6 6 6"></path></svg></button>
-      <button class="ib" id="dNext" data-ic="dnext" title="Ngày sau có dữ liệu"><svg class="ic" viewBox="0 0 24 24"><path d="M13 6l6 6-6 6M5 6l6 6-6 6"></path></svg></button>
-      <span class="div"></span>
-<button class="ib" id="pFirst" data-ic="first" title="Ảnh đầu (Home)"><svg class="ic" viewBox="0 0 24 24"><path d="M6 5v14M18 5l-7 7 7 7"></path></svg></button>
-      <button class="ib" id="pPrev" data-ic="prev" title="Ảnh trước (←)"><svg class="ic" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"></path></svg></button>
-      <button class="play" id="pPlay" data-ic="play" title="Chạy / dừng (Space)"><svg class="ic" viewBox="0 0 24 24"><path d="M7 5v14l12-7z" fill="currentColor" stroke="none"></path></svg></button>
-      <button class="ib" id="pNext" data-ic="next" title="Ảnh sau (→)"><svg class="ic" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg></button>
-      <button class="ib" id="pLast" data-ic="last" title="Ảnh mới nhất (End)"><svg class="ic" viewBox="0 0 24 24"><path d="M18 5v14M6 5l7 7-7 7"></path></svg></button>
-    </div>
-    <div class="tlbar"><canvas id="tlc" width="721" height="55"></canvas><div id="tip" hidden=""></div><div id="load">nạp ảnh 0/2</div></div>
-    <div class="tlr">
-      <select id="pSpeed" title="Tốc độ chạy">
-        <option value="1000">0.5×</option><option value="550" selected="">1×</option><option value="300">2×</option><option value="150">4×</option>
-      </select>
-      <select id="pStep" title="Nhịp tua: mỗi lần bấm ← → / khi chạy, các màn hình nhảy cùng nhau theo nhịp này">
-        <option value="auto" selected="">Nhịp: tự động</option><option value="5">Mỗi 5 phút</option><option value="10">Mỗi 10 phút</option><option value="act">Theo màn hình chọn</option><option value="all">Mọi ảnh</option>
-      </select>
-      <select id="pRange" title="Khoảng thời gian">
-        <option value="1">1 giờ</option><option value="2">2 giờ</option><option value="3" selected="">3 giờ</option>
-        <option value="6">6 giờ</option><option value="12">12 giờ</option><option value="24">24 giờ</option>
-        <option value="day">Cả ngày</option>
-      </select>
-      <button id="bAI" title="Hỏi AI — đọc rada, synop, sân bay, mô hình rồi trả lời"><i data-ic="ai"><svg class="ic" viewBox="0 0 24 24"><path d="M4 5.5h16v10.5H10l-4.5 3.5V16H4z"></path><path d="M15.5 7.6l.55 1.45 1.45.55-1.45.55-.55 1.45-.55-1.45-1.45-.55 1.45-.55z"></path><path d="M7.5 10h5M7.5 12.8h3.5"></path></svg></i><span>Hỏi AI</span></button>
-      <button class="live on" id="pLive" title="Tự nhảy tới ảnh mới nhất"><i></i>TRỰC TIẾP</button>
-      <div class="tlt"><b id="tNow" class="clk">16:50</b><small id="tSub">ảnh 16:50 · 13/11</small></div>
-      <button id="qrc" hidden="" aria-label="Mã QR mở trên điện thoại"></button>
-    </div>
-  </footer>
-</div>
-
-<div id="pop" class="pop" hidden=""></div>
-<div id="calPop" class="pop cal-pop" hidden=""></div>
-<div id="modal" hidden=""><div class="mbox"></div></div>
-<div id="toast" hidden=""></div>
-
-<script src="lib/leaflet.js"></script>
-<script src="lib/qrcode.js?v=1.0.9"></script>
-<script src="app.js?v=1.0.9"></script>
-
-
-</body></html>
-https://docs.google.com/document/d/1VIEbWKGqxLXpB8J-utQ34v3bCG6jvJoNEj0jAEP-x-o/edit?usp=sharing
 <!DOCTYPE html>
 <html lang="vi" data-theme="dark">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>RKT935 - Khí Tượng & Không Vực Phù Cát</title>
-  
-  <!-- Thư viện bản đồ Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>RKT925 - Trung Đoàn 925 (Phù Cát)</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+
   <style>
-    /* ---------------- GIAO DIỆN CHUẨN RKT935 (DARK THEME) ---------------- */
     :root {
-      --bg: #0b0e12;
-      --header-bg: #161b22;
-      --border: #30363d;
-      --text: #c9d1d9;
-      --text-highlight: #58a6ff;
-      --btn-bg: #21262d;
-      --btn-hover: #30363d;
+      --bg: #1a1a1a; --panel-bg: rgba(22, 27, 34, 0.9); --border: #30363d;
+      --text: #c9d1d9; --text-hl: #58a6ff; --btn: #21262d; --btn-hover: #30363d;
     }
-    body, html {
-      margin: 0; padding: 0; width: 100%; height: 100%;
-      background: var(--bg); color: var(--text); 
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      overflow: hidden;
+
+    html, body {
+      margin: 0; padding: 0; width: 100%; height: 100vh; background: var(--bg);
+      font-family: sans-serif; overflow: hidden;
     }
-    #app {
-      display: flex; flex-direction: column; width: 100vw; height: 100vh;
-    }
-    /* Header */
+
+    #app { position: relative; width: 100%; height: 100%; display: flex; flex-direction: column; }
+    #map { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1; background: #1a1a1a; }
+
     header {
-      height: 55px; background: var(--header-bg); display: flex; align-items: center;
-      padding: 0 20px; border-bottom: 1px solid var(--border); justify-content: space-between;
-      flex-shrink: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.5); z-index: 10;
+      position: absolute; top: 0; left: 0; right: 0; height: 45px; background: var(--panel-bg);
+      backdrop-filter: blur(5px); z-index: 1000; display: flex; align-items: center; justify-content: space-between;
+      padding: 0 15px; border-bottom: 1px solid var(--border); box-shadow: 0 2px 10px rgba(0,0,0,0.5);
     }
-    .brand { display: flex; align-items: center; gap: 10px; font-weight: bold; font-size: 16px; }
-    .brand span { color: var(--text-highlight); }
-    .brand small { font-size: 11px; font-weight: normal; color: #8b949e; display: block; margin-top: 2px;}
-    
-    /* Nút chức năng (Tabs & Toolbar) */
-    .nav-tabs, .tools { display: flex; gap: 10px; align-items: center; }
-    .nav-tabs button, .toolbar-btn {
-      background: var(--btn-bg); border: 1px solid var(--border); color: var(--text);
-      padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 13px; 
-      display: flex; align-items: center; gap: 6px; transition: 0.2s;
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: bold; color: white; font-size: 14px; }
+    .brand span { color: var(--text-hl); }
+    .status-text { font-size: 11px; color: #7ee787; font-weight: bold; text-align: center; }
+
+    .sidebar {
+      position: absolute; right: 10px; top: 60px; width: 40px; background: var(--panel-bg);
+      backdrop-filter: blur(5px); border-radius: 8px; border: 1px solid var(--border);
+      z-index: 1000; display: flex; flex-direction: column; padding: 5px 0; gap: 5px;
     }
-    .nav-tabs button.on { background: #1f6feb; border-color: #1f6feb; color: white; }
-    .nav-tabs button:hover, .toolbar-btn:hover { background: var(--btn-hover); }
-    .toolbar-btn.active { border-color: #ff7800; color: #ff7800; }
-    
-    /* Khu vực bản đồ */
-    #map { flex: 1; width: 100%; background: #1a1a1a; z-index: 1; }
-    
-    /* CSS cho Nhãn không vực và Popup hiển thị thông tin */
+    .sidebar-btn {
+      width: 100%; height: 36px; background: transparent; border: none; color: var(--text);
+      cursor: pointer; display: flex; justify-content: center; align-items: center; transition: 0.2s;
+    }
+    .sidebar-btn:hover { background: var(--btn-hover); color: white; }
+    .sidebar-btn.active { color: #ff7800; border-right: 3px solid #ff7800; }
+
+    .bottom-panel {
+      position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+      background: var(--panel-bg); backdrop-filter: blur(5px); border-radius: 8px;
+      border: 1px solid var(--border); z-index: 1000; padding: 12px 15px;
+      display: flex; flex-direction: column; gap: 8px; width: 85%; max-width: 650px;
+    }
+    .timeline-controls { display: flex; align-items: center; gap: 10px; color: white; font-size: 13px; }
+    .timeline-controls button {
+      background: var(--btn); border: 1px solid #555; color: white; padding: 5px 12px;
+      border-radius: 4px; cursor: pointer; font-weight: bold;
+    }
+    .timeline-controls button:hover { background: var(--btn-hover); }
+    .color-scale {
+      width: 100%; height: 10px; border-radius: 4px; border: 1px solid #555;
+      background: linear-gradient(to right, #00f, #0f0, #ff0, #f00, #f0f, #fff);
+    }
+    .scale-labels { display: flex; justify-content: space-between; color: #8b949e; font-size: 10px; }
+
     .airspace-label {
-      background: rgba(0, 0, 0, 0.8) !important; border: 1px solid #ff7800 !important; color: #ff7800 !important;
-      font-weight: bold; padding: 3px 6px; border-radius: 4px; font-size: 11px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.8);
+      background: rgba(0,0,0,0.75) !important; border: 1px solid #ff7800 !important; color: #ff7800 !important;
+      font-weight: bold; font-size: 11px; padding: 2px 5px; border-radius: 4px;
     }
-    .leaflet-popup-content-wrapper { background: var(--header-bg); color: var(--text); border: 1px solid var(--border); }
-    .leaflet-popup-tip { background: var(--border); }
-    .leaflet-container a.leaflet-popup-close-button { color: var(--text); }
+    .leaflet-popup-content-wrapper { background: #161b22; color: #c9d1d9; border: 1px solid #ff7800; }
+    .leaflet-popup-tip { background: #ff7800; }
+
+    /* Nhãn quần đảo Hoàng Sa / Trường Sa */
+    .island-label {
+      display: inline-block; transform: translate(-50%, -50%); text-align: center; white-space: nowrap;
+      pointer-events: none; font-weight: 800; color: #ffd400;
+      text-shadow: 0 0 4px #000, 0 0 8px #000, 2px 2px 4px #000;
+    }
+    .island-label .name { font-size: 28px; letter-spacing: 2px; text-transform: uppercase; }
+    .island-label .sub { font-size: 15px; letter-spacing: 3px; color: #ff4d4d; margin-top: 2px; }
+
+    /* Icon sân bay */
+    .airport-marker {
+      width: 34px; height: 34px; border-radius: 50%; background: #ff7800; border: 2px solid #fff;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 0 5px rgba(255,120,0,0.3), 0 2px 8px rgba(0,0,0,0.6);
+    }
   </style>
 </head>
 <body>
 <div id="app">
-  <!-- TÁI TẠO THANH HEADER GIAO DIỆN RKT935 -->
-  <header id="top">
-<div class="brand">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--text-highlight)"><path d="M12 2L12 12l7.8 4.5"></path><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4.5"></circle></svg>
-      <div>
-        <b>RKT<span>935</span> <i>V1.0</i></b>
-        <small>Hệ thống Không vực & Khí tượng Sân bay Phù Cát</small>
-      </div>
+  <div id="map"></div>
+
+  <header>
+    <div class="brand">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--text-hl)"><path d="M12 2L12 12l7.8 4.5"></path><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4.5"></circle></svg>
+      RKT<span>925</span> | TRUNG ĐOÀN 925 (PHÙ CÁT)
     </div>
-    
-    <nav class="nav-tabs">
-      <button class="on" id="tabRadar">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="2" x2="12" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg>
-        Radar / Không vực
-      </button>
-      <button id="tabWeather" title="Dữ liệu Synop">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"></path><path d="M9 4v14M15 6v14"></path></svg>
-        Synop
-      </button>
-    </nav>
-    
-    <div class="tools">
-      <button class="toolbar-btn active" id="bLayers" title="Bật/Tắt các vòng cự ly & không vực">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-        <span>Lớp phủ KV</span>
-      </button>
-    </div>
+    <div class="status-text" id="radar-time">ĐANG KHỞI TẠO RADAR...</div>
+    <div style="color: #8b949e; font-size: 12px;" id="clock">--:--</div>
   </header>
 
-  <!-- KHU VỰC HIỂN THỊ BẢN ĐỒ -->
-  <div id="map"></div>
+  <div class="sidebar">
+    <button class="sidebar-btn" title="Chế độ Radar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle></svg></button>
+    <button class="sidebar-btn active" id="bLayers" title="Bật/Tắt Không vực"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></button>
+  </div>
+
+  <div class="bottom-panel">
+    <div class="timeline-controls">
+      <button id="btnPlay" onclick="togglePlay()">▶ Phát</button>
+      <button onclick="changeFrame(-1)">◀ Lùi</button>
+      <input type="range" id="timeSlider" min="0" max="0" value="0" style="flex:1;" oninput="onSliderChange(this.value)">
+      <button onclick="changeFrame(1)">Tiến ▶</button>
+      <span id="timeDisplay" style="font-weight:bold; color:#ff7800; min-width: 65px; text-align: right;">--:--</span>
+    </div>
+    <div>
+      <div class="color-scale"></div>
+      <div class="scale-labels">
+        <span>0</span><span>15</span><span>30</span><span>45</span><span>60</span><span>>70 dBZ (Mưa/Dông)</span>
+      </div>
+    </div>
+  </div>
 </div>
 
-<!-- Thư viện bản đồ Leaflet JS -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
 <script>
-  // 1. Cấu hình Bản đồ mặc định tại Phù Cát
-  const map = L.map('map', {
-    center: [13.9536, 109.0453], // Tâm đường băng Phù Cát
-    zoom: 9, // Độ zoom để nhìn bao quát toàn bộ vùng
-    zoomControl: true
-  });
+  setInterval(() => {
+    var now = new Date();
+    document.getElementById('clock').innerText = now.toLocaleTimeString('vi-VN', {hour: '2-digit', minute:'2-digit'});
+  }, 1000);
 
-  // Tải bản đồ nền Dark Theme (tương đồng với nền dark của RKT935)
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  var container = L.DomUtil.get('map');
+  if (container != null) { container._leaflet_id = null; }
+
+  var AIRPORT = [13.9536, 109.0453];
+
+  var map = L.map('map', { center: AIRPORT, zoom: 9, maxZoom: 19, minZoom: 6, zoomControl: false });
+  L.control.zoom({ position: 'bottomleft' }).addTo(map);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '&copy; OpenStreetMap &copy; CARTO'
+    attribution: '&copy; OpenStreetMap contributors | Radar: RainViewer'
   }).addTo(map);
 
-  // Đánh dấu Tâm sân bay Phù Cát
-  L.marker([13.9536, 109.0453]).addTo(map)
-    .bindPopup('<b>SÂN BAY PHÙ CÁT (VVPC)</b><br>Tọa độ ARP: 13.9536°N, 109.0453°E');
+  // ====== RADAR (RainViewer) ======
+  // Từ 2026 RainViewer giới hạn 100 yêu cầu/phút/IP và zoom tối đa 7.
+  // Vì vậy chỉ tải 1 khung hình đang xem, KHÔNG tải đồng thời tất cả khung.
+  var radarFrames = [];
+  var radarLayers = {};
+  var activeLayer = null;
+  var currentIndex = 0;
+  var hostUrl = '';
+  var swapTimer = null;
+  var tileErrorCount = 0;
+  var isPlaying = false;
+  var playInterval = null;
+  var statusEl = document.getElementById('radar-time');
+  var statusBase = 'ĐANG KHỞI TẠO RADAR...';
 
-  // 2. Dữ liệu các Không vực (KV 50 -> 58)
-  const phuCatAirspace = [
-    { id: "50", name: "Khu vực 50", lat: 14.2413, lon: 108.6046, hat: 2700, radius: 5000, vao: "3500m (48 km, 3'40\", 300°)", ra: "3000m (57 km, 4'20\", 125°)" },
-    { id: "51", name: "Khu vực 51", lat: 13.6691, lon: 108.4139, hat: 2300, radius: 5000, vao: "3500m (68 km, 5'10\", 235°)", ra: "2700m (75 km, 5'40\", 65°)" },
-{ id: "52", name: "Khu vực 52", lat: 13.4623, lon: 109.0873, hat: 1900, radius: 5000, vao: "3500m (59 km, 4'25\", 165°)", ra: "2400m (55 km, 4'05\", 355°)" },
-    { id: "53", name: "Khu vực 53", lat: 14.8136, lon: 108.9497, hat: 1700, radius: 5000, vao: "3500m (90 km, 6'45\", 355°)", ra: "2100m (96 km, 7'10\", 175°)" },
-    { id: "53A", name: "Khu vực 53A", lat: 14.3134, lon: 109.0754, hat: 1500, radius: 5000, vao: "3500m (32 km, 2'25\", 10°)", ra: "2500m (40 km, 3'00\", 185°)" },
-    { id: "56", name: "Khu vực 56", lat: 14.2577, lon: 109.4580, hat: 600, radius: 5000, vao: "3500m (50 km, 3'45\", 70°)", ra: "1200m (56 km, 4'15\", 235°)" },
-    { id: "57", name: "Khu vực 57", lat: 13.6769, lon: 109.8258, hat: 600, radius: 5000, vao: "3500m (92 km, 6'55\", 120°)", ra: "1500m (90 km, 6'45\", 290°)" },
-    { id: "58", name: "Khu vực 58", lat: 14.7691, lon: 109.6552, hat: 600, radius: 5000, vao: "3500m (103 km, 7'45\", 40°)", ra: "1800m (112 km, 8'20\", 215°)" }
+  function setStatus(text, isError) {
+    statusEl.innerText = text;
+    statusEl.style.color = isError ? '#ff7b72' : '#7ee787';
+  }
+
+  fetch('https://api.rainviewer.com/public/weather-maps.json')
+    .then(res => {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    })
+    .then(data => {
+      hostUrl = data.host;
+      radarFrames = (data.radar && data.radar.past) || [];
+      if (radarFrames.length > 0) {
+        var slider = document.getElementById('timeSlider');
+        slider.min = 0;
+        slider.max = radarFrames.length - 1;
+        showFrame(radarFrames.length - 1);
+      } else {
+        setStatus('KHÔNG CÓ DỮ LIỆU RADAR', true);
+      }
+    })
+    .catch(err => {
+      setStatus('LỖI TẢI DỮ LIỆU RADAR: ' + err.message, true);
+    });
+
+  function getLayer(idx) {
+    if (radarLayers[idx]) return radarLayers[idx];
+    var url = hostUrl + radarFrames[idx].path + '/256/{z}/{x}/{y}/2/1_1.png';
+    var layer = L.tileLayer(url, {
+      opacity: 0.85,
+      zIndex: 10,
+      maxNativeZoom: 7,   // RainViewer chỉ có tile tới zoom 7
+      maxZoom: 19
+    });
+    layer.on('loading', function() { tileErrorCount = 0; });
+    layer.on('tileerror', function() { tileErrorCount++; });
+    layer.on('load', function() {
+      if (layer !== activeLayer) return;
+      if (tileErrorCount > 0) {
+        setStatus('LỖI TẢI ' + tileErrorCount + ' Ô RADAR (có thể bị giới hạn 100 yêu cầu/phút)', true);
+      } else {
+        setStatus(statusBase, false);
+      }
+    });
+    radarLayers[idx] = layer;
+    return layer;
+  }
+
+  function swapLayer(index) {
+    if (index !== currentIndex) return;
+    var next = getLayer(index);
+    var prev = activeLayer;
+    if (prev === next) return;
+    activeLayer = next;
+    next.addTo(map);
+    if (prev) {
+      var removePrev = function() { if (prev !== activeLayer) map.removeLayer(prev); };
+      next.once('load', removePrev);
+      setTimeout(removePrev, 2500);
+    }
+  }
+
+  function showFrame(index) {
+    if (radarFrames.length === 0) return;
+    currentIndex = index;
+    document.getElementById('timeSlider').value = index;
+
+    var frameTime = new Date(radarFrames[index].time * 1000);
+    var timeStr = frameTime.toLocaleTimeString('vi-VN', {hour: '2-digit', minute:'2-digit'});
+    document.getElementById('timeDisplay').innerText = timeStr;
+    statusBase = 'QUÁ KHỨ: ' + timeStr;
+    setStatus(statusBase, false);
+
+    // Chờ 120ms để tránh gửi quá nhiều yêu cầu khi kéo thanh trượt nhanh
+    clearTimeout(swapTimer);
+    swapTimer = setTimeout(function() { swapLayer(index); }, 120);
+  }
+
+  function onSliderChange(val) {
+    showFrame(parseInt(val));
+  }
+
+  function changeFrame(direction) {
+    if (radarFrames.length === 0) return;
+    var newIdx = currentIndex + direction;
+    if (newIdx >= radarFrames.length) newIdx = 0;
+    if (newIdx < 0) newIdx = radarFrames.length - 1;
+    showFrame(newIdx);
+  }
+
+  function togglePlay() {
+    var btn = document.getElementById('btnPlay');
+    if (isPlaying) {
+      clearInterval(playInterval);
+      isPlaying = false;
+      btn.innerText = '▶ Phát';
+    } else {
+      isPlaying = true;
+      btn.innerText = '⏸ Dừng';
+      playInterval = setInterval(function() {
+        var nextIdx = currentIndex + 1;
+        if (nextIdx >= radarFrames.length) nextIdx = 0;
+        showFrame(nextIdx);
+      }, 1000);
+    }
+  }
+
+  // ====== SÂN BAY PHÙ CÁT ======
+  var airportIcon = L.divIcon({
+    className: '',
+    html: '<div class="airport-marker"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg></div>',
+    iconSize: [34, 34],
+    iconAnchor: [17, 17],
+    popupAnchor: [0, -18]
+  });
+
+  L.marker(AIRPORT, { icon: airportIcon, zIndexOffset: 1000 })
+    .addTo(map)
+    .bindPopup('<b style="color:#ff7800">SÂN BAY PHÙ CÁT - TRUNG ĐOÀN 925</b>')
+    .bindTooltip('PHÙ CÁT', { permanent: true, direction: 'bottom', offset: [0, 18], className: 'airspace-label' });
+
+  // ====== QUẦN ĐẢO HOÀNG SA - TRƯỜNG SA ======
+  var islands = [
+    { name: "Quần đảo Hoàng Sa", lat: 16.5, lon: 112.0 },
+    { name: "Quần đảo Trường Sa", lat: 9.5, lon: 114.0 }
   ];
 
-  // 3. Khởi tạo Group chứa tất cả các vùng trời
-  let airspaceLayerGroup = L.layerGroup();
+  islands.forEach(function(isl) {
+    L.circleMarker([isl.lat, isl.lon], {
+      radius: 5, color: '#000', weight: 1, fillColor: '#ffd400', fillOpacity: 1, interactive: false
+    }).addTo(map);
+
+    L.marker([isl.lat, isl.lon], {
+      interactive: false,
+      keyboard: false,
+      zIndexOffset: 500,
+      icon: L.divIcon({
+        className: '',
+        iconSize: [0, 0],
+        html: '<div class="island-label" style="margin-top:-34px;">' +
+                '<div class="name">' + isl.name + '</div>' +
+                '<div class="sub">★ VIỆT NAM ★</div>' +
+              '</div>'
+      })
+    }).addTo(map);
+  });
+
+  // ====== KHÔNG VỰC (bán kính 15km) ======
+  var phuCatAirspace = [
+    { id: "50", name: "KV 50", lat: 14.2413, lon: 108.6046, hat: 2700, radius: 15000, vao: "3500m (48km, 300°)", ra: "3000m" },
+    { id: "51", name: "KV 51", lat: 13.6691, lon: 108.4139, hat: 2300, radius: 15000, vao: "3500m (68km, 235°)", ra: "2700m" },
+    { id: "52", name: "KV 52", lat: 13.4623, lon: 109.0873, hat: 1900, radius: 15000, vao: "3500m (59km, 165°)", ra: "2400m" },
+    { id: "53", name: "KV 53", lat: 14.8136, lon: 108.9497, hat: 1700, radius: 15000, vao: "3500m (90km, 355°)", ra: "2100m" },
+    { id: "53A", name: "KV 53A", lat: 14.3134, lon: 109.0754, hat: 1500, radius: 15000, vao: "3500m (32km, 10°)", ra: "2500m" },
+    { id: "56", name: "KV 56", lat: 14.2577, lon: 109.4580, hat: 600, radius: 15000, vao: "3500m (50km, 70°)", ra: "1200m" },
+    { id: "57", name: "KV 57", lat: 13.6769, lon: 109.8258, hat: 600, radius: 15000, vao: "3500m (92km, 120°)", ra: "1500m" },
+    { id: "58", name: "KV 58", lat: 14.7691, lon: 109.6552, hat: 600, radius: 15000, vao: "3500m (103km, 40°)", ra: "1800m" }
+  ];
+
+  var airspaceLayerGroup = L.layerGroup();
 
   function renderAirspaces() {
     airspaceLayerGroup.clearLayers();
-    
-    phuCatAirspace.forEach(item => {
-      // Vẽ vòng tròn đại diện bán kính vùng
-      const circle = L.circle([item.lat, item.lon], {
-        color: '#ff7800',
-        weight: 2,
-        fillColor: '#ff7800',
-        fillOpacity: 0.15,
-        radius: item.radius
+    L.circle(AIRPORT, { color: '#ff7800', weight: 1, fill: false, radius: 100000, dashArray: '5, 10' }).addTo(airspaceLayerGroup);
+    L.circle(AIRPORT, { color: '#ff7800', weight: 1, fill: false, radius: 200000, dashArray: '5, 10' }).addTo(airspaceLayerGroup);
+
+    phuCatAirspace.forEach(function(item) {
+      var circle = L.circle([item.lat, item.lon], {
+        color: '#800080', weight: 2, fillColor: '#800080', fillOpacity: 0.25, radius: item.radius
       });
 
-      // Tạo Popup chi tiết hiển thị khi Click
-      const popupContent = `
-        <div style="line-height: 1.5; min-width: 180px;">
+      var popupContent = `
+        <div style="line-height: 1.5; min-width: 150px;">
           <b style="color: #ff7800; font-size: 14px;">${item.name}</b><br>
-          <hr style="margin: 5px 0; border:0; border-top:1px solid #30363d;">
-          <span style="color: #8b949e">Độ cao trần (Hat):</span> <b style="color: #c9d1d9">${item.hat} m</b><br>
-          <span style="color: #8b949e">Vào:</span> <span style="color: #c9d1d9">${item.vao}</span><br>
-          <span style="color: #8b949e">Ra:</span> <span style="color: #c9d1d9">${item.ra}</span><br>
-          <hr style="margin: 5px 0; border:0; border-top:1px solid #30363d;">
-          <small style="color: #8b949e">Tâm: ${item.lat}°N, ${item.lon}°E</small>
+          <span style="color: #8b949e">Độ cao trần:</span> <b style="color: #333">${item.hat} m</b><br>
+          <span style="color: #8b949e">Vào:</span> <span style="color: #333">${item.vao}</span><br>
+          <span style="color: #8b949e">Ra:</span> <span style="color: #333">${item.ra}</span>
         </div>
       `;
       circle.bindPopup(popupContent);
-
-      // Thêm Label cố định hiển thị Tên KV
-      circle.bindTooltip(item.name, { 
-        permanent: true, 
-        direction: 'center', 
-        className: 'airspace-label' 
-      });
-
+      circle.bindTooltip(item.name, { permanent: true, direction: 'center', className: 'airspace-label' });
       circle.addTo(airspaceLayerGroup);
+
+      L.polyline([AIRPORT, [item.lat, item.lon]], {color: 'rgba(255,0,0,0.6)', weight: 1, dashArray: '4, 4'}).addTo(airspaceLayerGroup);
     });
-    
-    // Thêm các lớp vào bản đồ
+
     airspaceLayerGroup.addTo(map);
   }
 
-  // Khởi chạy vẽ không vực ngay khi mở web
   renderAirspaces();
 
-  // 4. Xử lý logic Nút "Lớp phủ KV" (Bật/Tắt hiển thị)
-  let isAirspaceVisible = true;
-  const btnLayers = document.getElementById('bLayers');
-  
-  btnLayers.addEventListener('click', () => {
-    if (isAirspaceVisible) {
-map.removeLayer(airspaceLayerGroup);
-      btnLayers.classList.remove('active');
-      isAirspaceVisible = false;
-    } else {
-      airspaceLayerGroup.addTo(map);
-      btnLayers.classList.add('active');
-      isAirspaceVisible = true;
-    }
-  });
+  var isAirspaceVisible = true;
+  var btnLayers = document.getElementById('bLayers');
+  if (btnLayers) {
+    btnLayers.addEventListener('click', function() {
+      if (isAirspaceVisible) {
+        map.removeLayer(airspaceLayerGroup);
+        btnLayers.classList.remove('active');
+        isAirspaceVisible = false;
+      } else {
+        airspaceLayerGroup.addTo(map);
+        btnLayers.classList.add('active');
+        isAirspaceVisible = true;
+      }
+    });
+  }
 </script>
 </body>
 </html>
